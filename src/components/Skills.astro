@@ -1,0 +1,52 @@
+---
+const skillCategories = [
+  {
+    category: 'Architectural Design',
+    skills: ['Microservices', 'REST API Design', 'Agentic Workflows', 'Data Ingest Pipelines'],
+  },
+  {
+    category: 'Cloud & Infrastructure',
+    skills: ['AWS', 'GCP', 'Azure', 'Terraform (IaC)', 'OpenTelemetry', 'CloudFormation'],
+  },
+  {
+    category: 'AI & Data',
+    skills: ['LLM Integrations (Claude API)', 'LLM-Driven Analysis', 'Observability KPIs', 'Real-Time Data Pipelines'],
+  },
+  {
+    category: 'Languages & Frameworks',
+    skills: ['TypeScript', 'Node.js', 'Python', 'REST APIs'],
+  },
+  {
+    category: 'Business & Domain',
+    skills: ['Algorithmic Trading Systems', 'Technical Indicators (GEX, Volatility)', 'Enterprise Observability', 'Technical Consulting'],
+  },
+];
+---
+
+<section id="skills" class="py-20">
+  <div class="mx-auto max-w-content px-6">
+    <div class="animate-fade-in">
+      <h2 class="text-sm font-medium text-accent uppercase tracking-wide mb-2">Skills</h2>
+      <h3 class="text-2xl sm:text-3xl font-bold text-dark-50 mb-10">What I work with</h3>
+
+      <div class="space-y-8">
+        {
+          skillCategories.map((cat) => (
+            <div>
+              <h4 class="text-sm font-medium text-dark-100 uppercase tracking-wide mb-3">
+                {cat.category}
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                {cat.skills.map((skill) => (
+                  <span class="px-3 py-1.5 text-sm rounded-lg bg-dark-700 text-dark-50 border border-dark-500 hover:border-accent hover:text-accent transition-colors duration-200">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

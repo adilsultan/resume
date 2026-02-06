@@ -1,0 +1,69 @@
+---
+const experiences = [
+  {
+    title: 'Backend Software Engineer / Partnerships Engineer',
+    company: 'ServiceNow (Cloud Observability / Lightstep)',
+    location: 'San Jose, CA',
+    period: 'July 2021 — Present',
+    description: 'Developing AI-driven insights for microservice health and designing high-performance REST APIs across a cloud observability platform.',
+    highlights: [
+      'Developed AI-driven insights for microservice health, coordinating cross-functional teams to deploy core features for global service health dashboards.',
+      'Designed and implemented high-performance REST APIs that improved customer engagement and UI performance.',
+      'Built seamless integration pipelines for AWS/GCP using Terraform and CloudFormation to consolidate multi-cloud incident analysis.',
+      'Launched a new microservice implementing the Open Agent Management Protocol (OpAMP), reducing customer environment troubleshooting time by over 50%.',
+      'Acted as a bridge between Engineering and Product, facilitating demos that increased greenfield feature engagement by 25% and secured 5 new POCs.',
+      'Identified and tracked feature KPIs, improving overall discoverability by 80% through custom engagement dashboards.',
+    ],
+  },
+  {
+    title: 'Technology Consultant',
+    company: 'Accenture Technology',
+    location: 'San Jose, CA',
+    period: 'September 2017 — June 2021',
+    description: 'Led technical implementation and advisory for enterprise clients, managing the deployment of complex SaaS integrations and custom internal tools.',
+    highlights: [
+      'Led technical implementation and requirements gathering for enterprise clients, ensuring alignment between business goals and software capabilities.',
+      'Acted as a technical advisor for global organizations, managing the deployment of complex SaaS integrations and custom internal tools.',
+    ],
+  },
+];
+---
+
+<section id="experience" class="py-20">
+  <div class="mx-auto max-w-content px-6">
+    <div class="animate-fade-in">
+      <h2 class="text-sm font-medium text-accent uppercase tracking-wide mb-2">Experience</h2>
+      <h3 class="text-2xl sm:text-3xl font-bold text-dark-50 mb-10">Where I've worked</h3>
+
+      <div class="space-y-10">
+        {
+          experiences.map((exp) => (
+            <div class="relative pl-6 border-l border-dark-500 hover:border-accent transition-colors duration-300">
+              <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-500 border-2 border-dark-900" />
+              <div class="mb-1">
+                <h4 class="text-lg font-semibold text-dark-50">{exp.title}</h4>
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span class="text-accent font-medium">{exp.company}</span>
+                  <span class="text-dark-200 text-sm">{exp.period}</span>
+                </div>
+              </div>
+              <p class="text-dark-100 mt-2 leading-relaxed">{exp.description}</p>
+              <ul class="mt-3 space-y-1.5">
+                {exp.highlights.map((item) => (
+                  <li class="flex items-start gap-2 text-dark-100 text-sm">
+                    <span class="text-accent mt-1.5 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

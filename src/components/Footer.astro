@@ -1,0 +1,18 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-8 border-t border-dark-700/50">
+  <div class="mx-auto max-w-content px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-dark-200 text-sm">
+        &copy; {currentYear} Adil Sultan. All rights reserved.
+      </p>
+      <p class="text-dark-300 text-xs">
+        Built with <a href="https://astro.build" class="text-dark-200 hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Astro</a>
+        &
+        <a href="https://tailwindcss.com" class="text-dark-200 hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>
+      </p>
+    </div>
+  </div>
+</footer>
