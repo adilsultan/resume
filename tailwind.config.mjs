@@ -17,9 +17,9 @@ export default {
           900: '#0a0a0a',
         },
         accent: {
-          DEFAULT: '#5eead4',
-          hover: '#2dd4bf',
-          muted: '#134e4a',
+          DEFAULT: '#d4a647',
+          hover: '#e6b84d',
+          muted: '#3d2e10',
         },
       },
       fontFamily: {
